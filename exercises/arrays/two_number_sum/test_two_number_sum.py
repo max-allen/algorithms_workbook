@@ -1,6 +1,5 @@
 import pytest
-# from .two_number_sum import two_number_sum
-from .solutions.iterative import two_number_sum
+from two_number_sum import two_number_sum
 
 class TestCases:
   def test_one(self):
