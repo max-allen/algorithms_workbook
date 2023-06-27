@@ -1,1 +1,1 @@
-# dst-algorithms
+# Algorithms Workbook
