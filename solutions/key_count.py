@@ -16,6 +16,10 @@
 
 
 def key_count(obj, target, count=0):
+    """
+    time: O(n), where n is the number keys present on the object
+    space: O(n), where n is the number of non empty keys on the object
+    """
     for key in obj:
         if key == target:
             count += 1

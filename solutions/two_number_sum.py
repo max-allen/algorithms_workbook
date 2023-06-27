@@ -5,6 +5,10 @@
 
 
 def two_number_sum(nums, target):
+    """
+    time: O(n), where n is the number of integers in the list
+    space: O(n), where n is the number of integers in the list
+    """
     mutable = nums.copy()
     el = mutable.pop(0)
 
