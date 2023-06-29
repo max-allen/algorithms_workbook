@@ -1,4 +1,3 @@
-import pytest
 from solutions import key_count
 
 

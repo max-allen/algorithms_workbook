@@ -1,4 +1,3 @@
-import pytest
 from solutions import is_palindrome
 
 

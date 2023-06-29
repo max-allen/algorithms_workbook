@@ -1,4 +1,3 @@
-import pytest
 from solutions import two_number_sum
 
 
