@@ -77,3 +77,8 @@ def is_palindrome_invalid():
 @pytest.fixture
 def is_palindrome_valid_spaces():
     return "Was it a car or a cat I saw"
+
+
+@pytest.fixture
+def get_nth_fibonacci_sequence():
+    return [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
