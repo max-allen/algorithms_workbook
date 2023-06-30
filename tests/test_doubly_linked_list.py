@@ -1,4 +1,4 @@
-from solutions import LinkedList, Node
+from solutions import LinkedList
 
 
 class TestCases:
@@ -8,25 +8,25 @@ class TestCases:
         assert linked.head is None
         assert linked.tail is None
 
-    def test_set_head(self):
+    def test_set_head(self, linked_list_nodes):
         """Adds node to head of list"""
         linked = LinkedList()
 
-        linked.set_head(Node(5))
-        linked.set_head(Node(10))
-        linked.set_head(Node(3))
+        linked.set_head(linked_list_nodes[5])
+        linked.set_head(linked_list_nodes[10])
+        linked.set_head(linked_list_nodes[3])
 
         assert linked.head.value == 3
         assert linked.head.next.value == 10
         assert linked.head.next.next.value == 5
 
-    def test_set_tail(self):
+    def test_set_tail(self, linked_list_nodes):
         """Adds node to end of list"""
         linked = LinkedList()
 
-        linked.set_tail(Node(1))
-        linked.set_tail(Node(9))
-        linked.set_tail(Node(4))
+        linked.set_tail(linked_list_nodes[1])
+        linked.set_tail(linked_list_nodes[9])
+        linked.set_tail(linked_list_nodes[4])
 
         assert linked.tail.value == 4
         assert linked.tail.prev.value == 9

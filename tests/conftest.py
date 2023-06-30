@@ -82,3 +82,30 @@ def is_palindrome_valid_spaces():
 @pytest.fixture
 def get_nth_fibonacci_sequence():
     return [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+
+
+class Node:
+    def __init__(self, value=None):
+        self.value = value
+        self.prev = None
+        self.next = None
+
+
+class LinkedList:
+    def __init__(self, value=None):
+        self.value = value
+        self.next = None
+
+
+@pytest.fixture
+def linked_list_nodes():
+    return {5: Node(5), 10: Node(10), 3: Node(3), 1: Node(1), 9: Node(9), 4: Node(4)}
+
+
+@pytest.fixture
+def singly_linked_list(linked_list_nodes):
+    linked_list = LinkedList(linked_list_nodes[4].value)
+    linked_list.next = linked_list_nodes[9]
+    linked_list.next.next = linked_list_nodes[9]
+    linked_list.next.next.next = linked_list_nodes[10]
+    return linked_list
