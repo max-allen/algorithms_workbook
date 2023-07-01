@@ -1,4 +1,5 @@
 import pytest
+from solutions import LinkedList as DoublyLinkedList
 
 
 @pytest.fixture
@@ -109,3 +110,20 @@ def singly_linked_list(linked_list_nodes):
     linked_list.next.next = linked_list_nodes[9]
     linked_list.next.next.next = linked_list_nodes[10]
     return linked_list
+
+
+@pytest.fixture
+def doubly_linked_list(linked_list_nodes):
+    linked_list = DoublyLinkedList()
+
+    # 10 <--> 5 <--> 9
+
+    linked_list.set_head(linked_list_nodes[5])
+    linked_list.set_tail(linked_list_nodes[9])
+    linked_list.set_head(linked_list_nodes[10])
+    return linked_list
+
+
+@pytest.fixture
+def empty_node():
+    return Node()

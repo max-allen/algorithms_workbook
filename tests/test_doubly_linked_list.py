@@ -31,3 +31,20 @@ class TestCases:
         assert linked.tail.value == 4
         assert linked.tail.prev.value == 9
         assert linked.tail.prev.prev.value == 1
+
+    def test_insert_before(self, linked_list_nodes, empty_node, doubly_linked_list):
+        """Inserts node before specified node"""
+
+        node_to_insert = empty_node
+        node_to_insert.value = 24
+
+        # 10 <--> 5 <--> 24 <--> 9
+        doubly_linked_list.insert(
+            linked_list_nodes[9], node_to_insert, insert_type="before"
+        )
+
+        assert doubly_linked_list.head.next.next.value == 24
+        assert doubly_linked_list.head.next.next.prev.value == 5
+        assert doubly_linked_list.head.next.next.next.value == 9
+        assert doubly_linked_list.head.next.next.next.prev.value == 24
+
