@@ -48,3 +48,16 @@ class TestCases:
         assert doubly_linked_list.head.next.next.next.value == 9
         assert doubly_linked_list.head.next.next.next.prev.value == 24
 
+    def test_insert_after(self, linked_list_nodes, empty_node, doubly_linked_list):
+        """Inserts node after specified node by default"""
+
+        node_to_insert = empty_node
+        node_to_insert.value = 18
+
+        # 10 <--> 18 <--> 5 <--> 9
+        doubly_linked_list.insert(linked_list_nodes[10], node_to_insert)
+
+        assert doubly_linked_list.head.next.value == 18
+        assert doubly_linked_list.head.next.prev.value == 10
+        assert doubly_linked_list.head.next.next.value == 5
+        assert doubly_linked_list.head.next.next.prev.value == 18

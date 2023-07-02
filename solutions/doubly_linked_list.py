@@ -48,6 +48,7 @@ class LinkedList:
                     insert_node.prev = curr
                     insert_node.next = curr.next
 
+                    curr.next.prev = insert_node
                     curr.next = insert_node
                     break
             curr = curr.next
