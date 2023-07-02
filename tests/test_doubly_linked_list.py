@@ -9,7 +9,7 @@ class TestCases:
         assert linked.tail is None
 
     def test_set_head(self, linked_list_nodes):
-        """Adds node to head of list"""
+        """Adds node to head of list. Increments length."""
         linked = LinkedList()
 
         linked.set_head(linked_list_nodes[5])
@@ -33,7 +33,8 @@ class TestCases:
         assert linked.tail.prev.prev.value == 1
 
     def test_insert_default(self, empty_node, doubly_linked_list):
-        """Inserts node at head by default"""
+        """Inserts node at head by default and increments length"""
+        assert doubly_linked_list.length == 3
 
         node_to_insert = empty_node
         node_to_insert.value = 2
@@ -74,3 +75,28 @@ class TestCases:
         assert doubly_linked_list.head.next.prev.value == 10
         assert doubly_linked_list.head.next.next.value == 5
         assert doubly_linked_list.head.next.next.prev.value == 18
+
+    def test_remove(self, linked_list_nodes, doubly_linked_list):
+        """Removes node from list and decrements length"""
+        assert doubly_linked_list.length == 3
+        # 10 <--> 9
+        doubly_linked_list.remove(linked_list_nodes[5])
+        assert doubly_linked_list.head.next.value == 9
+        assert doubly_linked_list.head.next.prev.value == 10
+        assert doubly_linked_list.length == 2
+
+    def test_remove_head(self, linked_list_nodes, doubly_linked_list):
+        """Removes node from head"""
+        # 5 <--> 9
+        doubly_linked_list.remove(linked_list_nodes[10])
+        assert doubly_linked_list.head.value == 5
+        assert doubly_linked_list.head.prev is None
+        assert doubly_linked_list.head.next.value == 9
+
+    def test_remove_tail(self, linked_list_nodes, doubly_linked_list):
+        """Removes node from tail"""
+        # 10 <--> 5
+        doubly_linked_list.remove(linked_list_nodes[9])
+        assert doubly_linked_list.tail.value == 5
+        assert doubly_linked_list.tail.next is None
+        assert doubly_linked_list.tail.prev.value == 10

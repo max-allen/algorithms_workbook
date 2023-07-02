@@ -16,7 +16,7 @@ class LinkedList:
             self.tail.prev = self.head
             self.head.next = self.tail
 
-        self.increment_length()
+        self.update_length()
 
     def set_tail(self, node):
         prev_tail = self.tail
@@ -30,7 +30,7 @@ class LinkedList:
             self.head.next = self.tail
             self.tail.prev = self.head
 
-        self.increment_length()
+        self.update_length()
 
     def insert(self, insert_node, find_node=None, insert_type=None):
         curr = self.head
@@ -56,7 +56,33 @@ class LinkedList:
                         break
                 curr = curr.next
 
-        self.increment_length()
+        self.update_length()
 
-    def increment_length(self):
-        self.length += 1
+    def remove(self, remove_node):
+        curr = self.head
+
+        while curr is not None:
+            if curr.value == remove_node.value:
+                if curr == self.head and self.head.next:
+                    self.head = self.head.next
+                    self.head.prev = None
+                    self.head.next.prev = self.head
+
+                elif curr == self.tail and self.tail.prev:
+                    self.tail = self.tail.prev
+                    self.tail.next = None
+                    self.tail.prev.next = None
+
+                else:
+                    curr.prev.next = curr.next
+                    curr.next.prev = curr.prev
+
+                curr = None
+                break
+
+            curr = curr.next
+
+        self.update_length("dec")
+
+    def update_length(self, operation_type="inc"):
+        self.length = self.length + 1 if operation_type == "inc" else self.length - 1
