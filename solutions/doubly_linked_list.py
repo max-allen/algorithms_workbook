@@ -32,26 +32,29 @@ class LinkedList:
 
         self.increment_length()
 
-    def insert(self, node, insert_node, insert_type="after"):
+    def insert(self, insert_node, find_node=None, insert_type=None):
         curr = self.head
 
-        while curr is not None:
-            if curr.value == node.value:
-                if insert_type == "before":
-                    insert_node.prev = curr.prev
-                    insert_node.next = curr
+        if find_node is None and insert_type is None:
+            self.set_head(insert_node)
+        else:
+            while curr is not None:
+                if curr.value == find_node.value:
+                    if insert_type == "before":
+                        insert_node.prev = curr.prev
+                        insert_node.next = curr
 
-                    curr.prev.next = insert_node
-                    curr.prev = insert_node
-                    break
-                else:
-                    insert_node.prev = curr
-                    insert_node.next = curr.next
+                        curr.prev.next = insert_node
+                        curr.prev = insert_node
+                        break
+                    elif insert_type == "after":
+                        insert_node.prev = curr
+                        insert_node.next = curr.next
 
-                    curr.next.prev = insert_node
-                    curr.next = insert_node
-                    break
-            curr = curr.next
+                        curr.next.prev = insert_node
+                        curr.next = insert_node
+                        break
+                curr = curr.next
 
         self.increment_length()
 

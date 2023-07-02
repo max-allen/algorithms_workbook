@@ -32,6 +32,17 @@ class TestCases:
         assert linked.tail.prev.value == 9
         assert linked.tail.prev.prev.value == 1
 
+    def test_insert_default(self, empty_node, doubly_linked_list):
+        """Inserts node at head by default"""
+
+        node_to_insert = empty_node
+        node_to_insert.value = 2
+
+        # 2 <--> 10 <--> 5 <--> 9
+        doubly_linked_list.insert(node_to_insert)
+
+        assert doubly_linked_list.head.value == 2
+
     def test_insert_before(self, linked_list_nodes, empty_node, doubly_linked_list):
         """Inserts node before specified node"""
 
@@ -40,7 +51,7 @@ class TestCases:
 
         # 10 <--> 5 <--> 24 <--> 9
         doubly_linked_list.insert(
-            linked_list_nodes[9], node_to_insert, insert_type="before"
+            node_to_insert, linked_list_nodes[9], insert_type="before"
         )
 
         assert doubly_linked_list.head.next.next.value == 24
@@ -55,7 +66,9 @@ class TestCases:
         node_to_insert.value = 18
 
         # 10 <--> 18 <--> 5 <--> 9
-        doubly_linked_list.insert(linked_list_nodes[10], node_to_insert)
+        doubly_linked_list.insert(
+            node_to_insert, linked_list_nodes[10], insert_type="after"
+        )
 
         assert doubly_linked_list.head.next.value == 18
         assert doubly_linked_list.head.next.prev.value == 10
