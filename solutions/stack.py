@@ -1,14 +1,14 @@
 from . import Node, LinkedList
 
 
-class Queue:
+class Stack:
     def __init__(self):
         self.items = LinkedList()
 
-    def enqueue(self, value):
+    def push(self, value):
         node = Node(value)
         self.items.insert(node)
 
-    def dequeue(self):
-        dequeued = self.items.remove(self.items.tail)
-        return dequeued
+    def pop(self):
+        popped = self.items.remove(self.items.head)
+        return popped

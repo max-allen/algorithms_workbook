@@ -1,5 +1,5 @@
 import pytest
-from solutions import Node, Queue, LinkedList as DoublyLinkedList
+from solutions import Node, Queue, Stack, LinkedList as DoublyLinkedList
 
 
 @pytest.fixture
@@ -124,9 +124,19 @@ def empty_node():
 
 @pytest.fixture
 def queue():
-    queue = Queue()
+    q = Queue()
 
-    queue.enqeue("foo")
-    queue.enqeue("bar")
-    queue.enqeue("baz")
-    return queue
+    q.enqueue("foo")
+    q.enqueue("bar")
+    q.enqueue("baz")
+    return q
+
+
+@pytest.fixture
+def stack():
+    s = Stack()
+
+    s.push("foo")
+    s.push("bar")
+    s.push("baz")
+    return s
