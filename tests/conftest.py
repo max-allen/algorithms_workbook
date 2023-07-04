@@ -140,3 +140,16 @@ def stack():
     s.push("bar")
     s.push("baz")
     return s
+
+
+@pytest.fixture
+def paths():
+    return [
+        {"foo": "bar"},
+        {"bar": "baz"},
+        {"qux": "quux"},
+        {"corge": "grault"},
+        {"garply": "waldo"},
+        {"fred": "plugh"},
+        {"xyzzy": "thud"},
+    ]

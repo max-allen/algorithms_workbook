@@ -106,6 +106,21 @@ class LinkedList:
 
         return False
 
+    def find_by_value(self, node_value):
+        if node_value == self.head.value:
+            return self.head
+
+        elif node_value == self.tail.value:
+            return self.tail
+
+        curr = self.head.next
+
+        while curr is not None:
+            if curr.value == node_value:
+                return curr
+
+            curr = curr.next
+
     def print_elements(self):
         curr = self.head
 
