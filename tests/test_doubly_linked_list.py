@@ -100,3 +100,16 @@ class TestCases:
         assert doubly_linked_list.tail.value == 5
         assert doubly_linked_list.tail.next is None
         assert doubly_linked_list.tail.prev.value == 10
+
+    def test_contains(self, linked_list_nodes, empty_node, doubly_linked_list):
+        """Returns boolean indicating whether node is present in list"""
+        assert doubly_linked_list.contains(18) is False
+
+        node_to_insert = empty_node
+        node_to_insert.value = 18
+
+        doubly_linked_list.insert(
+            node_to_insert, linked_list_nodes[10], insert_type="after"
+        )
+
+        assert doubly_linked_list.contains(18) is True

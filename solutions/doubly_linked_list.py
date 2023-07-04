@@ -86,3 +86,18 @@ class LinkedList:
 
     def update_length(self, operation_type="inc"):
         self.length = self.length + 1 if operation_type == "inc" else self.length - 1
+
+    def contains(self, node_value):
+        # check head and tail before iterating list
+        if node_value == self.head.value or node_value == self.tail.value:
+            return True
+
+        curr = self.head.next
+
+        while curr is not None:
+            if curr.value == node_value:
+                return True
+
+            curr = curr.next
+
+        return False
