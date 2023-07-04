@@ -1,5 +1,5 @@
 import pytest
-from solutions import LinkedList as DoublyLinkedList
+from solutions import Node, Queue, LinkedList as DoublyLinkedList
 
 
 @pytest.fixture
@@ -85,13 +85,6 @@ def get_nth_fibonacci_sequence():
     return [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
 
 
-class Node:
-    def __init__(self, value=None):
-        self.value = value
-        self.prev = None
-        self.next = None
-
-
 class LinkedList:
     def __init__(self, value=None):
         self.value = value
@@ -127,3 +120,13 @@ def doubly_linked_list(linked_list_nodes):
 @pytest.fixture
 def empty_node():
     return Node()
+
+
+@pytest.fixture
+def queue():
+    queue = Queue()
+
+    queue.enqeue("foo")
+    queue.enqeue("bar")
+    queue.enqeue("baz")
+    return queue

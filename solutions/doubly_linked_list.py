@@ -9,6 +9,9 @@ class LinkedList:
         self.head = node
 
         if prev_head:
+            if self.tail is None:
+                self.tail = prev_head
+
             prev_head.prev = self.head
             self.head.next = prev_head
 
@@ -37,6 +40,7 @@ class LinkedList:
 
         if find_node is None and insert_type is None:
             self.set_head(insert_node)
+            return
         else:
             while curr is not None:
                 if curr.value == find_node.value:
@@ -77,12 +81,12 @@ class LinkedList:
                     curr.prev.next = curr.next
                     curr.next.prev = curr.prev
 
+                removed_value = curr.value
                 curr = None
-                break
+                self.update_length("dec")
+                return removed_value
 
             curr = curr.next
-
-        self.update_length("dec")
 
     def update_length(self, operation_type="inc"):
         self.length = self.length + 1 if operation_type == "inc" else self.length - 1
@@ -101,3 +105,10 @@ class LinkedList:
             curr = curr.next
 
         return False
+
+    def print_elements(self):
+        curr = self.head
+
+        while curr is not None:
+            print("current_value:", curr.value)
+            curr = curr.next
