@@ -153,3 +153,35 @@ def paths():
         {"fred": "plugh"},
         {"xyzzy": "thud"},
     ]
+
+
+@pytest.fixture
+def filesystem_paths():
+    paths = [
+        "account/settings",
+        "account/settings/activity/client/home",
+        "profile/activity/team/client",
+        "account/notifications",
+        "about/contact/name",
+        "about",
+        "home",
+        "about/team",
+        "about/address",
+    ]
+
+    return {
+        "string": "\n".join(paths),
+        "hash": {
+            "account": {
+                "settings": {"activity": {"client": {"home": {}}}},
+                "notifications": {},
+            },
+            "profile": {"activity": {"team": {"client": {}}}},
+            "about": {
+                "contact": {"name": {}},
+                "team": {},
+                "address": {},
+            },
+            "home": {},
+        },
+    }

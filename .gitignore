@@ -2,4 +2,3 @@
 __pycache__/
 *.py[cod]
 *$py.class
-solutions/build_file_structure.py
