@@ -7,6 +7,7 @@ from .check_path_exists import check_path_exists
 from .get_nth_fibonacci import get_nth_fibonacci
 from .remove_linked_list_duplicates import remove_linked_list_duplicates
 from .build_directory_structure import build_directory_structure
+from .sum_linked_lists import sum_linked_lists
 
 from .helpers import Node
 from .doubly_linked_list import LinkedList

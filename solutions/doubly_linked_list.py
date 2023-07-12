@@ -26,6 +26,9 @@ class LinkedList:
         self.tail = node
 
         if prev_tail:
+            if self.head is None:
+                self.head = prev_tail
+
             prev_tail.next = self.tail
             self.tail.prev = prev_tail
 
@@ -41,6 +44,13 @@ class LinkedList:
         if find_node is None and insert_type is None:
             self.set_head(insert_node)
             return
+
+        elif insert_type is "head":
+            self.set_head(insert_node)
+
+        elif insert_type is "tail":
+            self.set_tail(insert_node)
+
         else:
             while curr is not None:
                 if curr.value == find_node.value:

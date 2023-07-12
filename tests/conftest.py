@@ -123,6 +123,33 @@ def empty_node():
 
 
 @pytest.fixture
+def linked_list_sum_prompt():
+    linked_list_one = DoublyLinkedList()
+    linked_list_two = DoublyLinkedList()
+    linked_list_three = DoublyLinkedList()
+
+    list_one_elements = [1, 7, 4, 2]
+    list_two_elements = [5, 4, 9]
+    list_three_elements = [2, 2, 9, 1]
+
+    for el in list_one_elements:
+        linked_list_one.insert(Node(el))
+
+    for el in list_two_elements:
+        linked_list_two.insert(Node(el))
+
+    for el in list_three_elements:
+        empty_node.value = el
+        linked_list_three.insert(Node(el))
+
+    return {
+        "list_one": linked_list_one,
+        "list_two": linked_list_two,
+        "expected": linked_list_three,
+    }
+
+
+@pytest.fixture
 def queue():
     q = Queue()
 
