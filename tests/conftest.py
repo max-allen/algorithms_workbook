@@ -1,5 +1,5 @@
 import pytest
-from solutions import Node, Queue, Stack, LinkedList as DoublyLinkedList
+from solutions import Node, Queue, Stack, Graph, LinkedList as DoublyLinkedList
 
 
 @pytest.fixture
@@ -211,4 +211,31 @@ def filesystem_paths():
             },
             "home": {},
         },
+    }
+
+
+@pytest.fixture
+def graph():
+    g = Graph()
+    g.add_edge("A", "B")
+    g.add_edge("A", "C")
+    g.add_edge("A", "D")
+    g.add_edge("B", "E")
+    g.add_edge("B", "F")
+    g.add_edge("C")
+    g.add_edge("D", "G")
+    g.add_edge("D", "H")
+    g.add_edge("E")
+    g.add_edge("F", "I")
+    g.add_edge("F", "J")
+    g.add_edge("G", "K")
+    g.add_edge("H")
+    g.add_edge("I")
+    g.add_edge("J")
+    g.add_edge("K")
+
+    return {
+        "fixture": g,
+        "dfs_a_expected": ["A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H"],
+        "bfs_a_expected": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"],
     }
