@@ -1,5 +1,4 @@
-from .doubly_linked_list import LinkedList
-from .helpers import Node
+from collections import defaultdict
 
 # Given a list of objects where each key value pair indicates a path between two elements,
 # deterimine whether a vaild path exists between the specified source and destination elements.
@@ -19,34 +18,20 @@ from .helpers import Node
 # foo, quux -> false
 
 
-def check_path_exists(src, dest, paths):
-    linked = LinkedList()
+def dfs(graph, vertex, target):
+    if vertex == target:
+        return True
 
-    for path in paths:
-        for key in path:
-            value = path[key]
-
-            linked.insert(Node(key))
-            linked.insert(Node(value))
-
-    src_node = linked.find_by_value(src)
-
-    if src_node is None:
-        return False
-
-    curr = src_node
-
-    while curr is not None:
-        if curr.value == dest:
-            return True
-        curr = curr.next
-
-    curr = src_node
-
-    while curr is not None:
-        if curr.value == dest:
-            return True
-
-        curr = curr.prev
+    for edge in graph[vertex]:
+        return dfs(graph, edge, target)
 
     return False
+
+
+def check_path_exists(src, dest, paths):
+    adj_list = defaultdict(list)
+    for path in paths:
+        for key in path:
+            adj_list[key].append(path[key])
+
+    return dfs(adj_list, src, dest)
