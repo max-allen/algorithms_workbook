@@ -1,4 +1,4 @@
-from collections import defaultdict
+from collections import defaultdict, deque
 
 # Given a list of objects where each key value pair indicates a path between two elements,
 # deterimine whether a vaild path exists between the specified source and destination elements.
@@ -18,6 +18,21 @@ from collections import defaultdict
 # foo, quux -> false
 
 
+def bfs(graph, src, dest):
+    queue = deque()
+    queue.append(src)
+
+    while len(queue):
+        curr = queue.popleft()
+        if curr == dest:
+            return True
+
+        for edge in graph[curr]:
+            queue.append(edge)
+
+    return False
+
+
 def dfs(graph, vertex, target):
     if vertex == target:
         return True
@@ -34,4 +49,4 @@ def check_path_exists(src, dest, paths):
         for key in path:
             adj_list[key].append(path[key])
 
-    return dfs(adj_list, src, dest)
+    return bfs(adj_list, src, dest)
