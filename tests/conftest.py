@@ -244,3 +244,25 @@ def graph():
 @pytest.fixture
 def is_mountain_peak_lists():
     return [[1, 2, 3, 4, 3, 2, 1], [1, 2, 1, 4, 3, 2, 1], [1, 2, 3, 4, 3, 4, 1]]
+
+
+@pytest.fixture
+def flood_fill_color_change():
+    return {
+        "input": [[1, 1, 1], [1, 1, 0], [1, 0, 1]],
+        "start_row": 1,
+        "start_col": 1,
+        "color": 2,
+        "expected": [[2, 2, 2], [2, 2, 0], [2, 0, 1]],
+    }
+
+
+@pytest.fixture
+def flood_fill_no_connection():
+    return {
+        "input": [[0, 0, 0], [0, 0, 0]],
+        "start_row": 0,
+        "start_col": 0,
+        "color": 0,
+        "expected": [[0, 0, 0], [0, 0, 0]],
+    }
