@@ -8,6 +8,7 @@ from .get_nth_fibonacci import get_nth_fibonacci
 from .remove_linked_list_duplicates import remove_linked_list_duplicates
 from .build_directory_structure import build_directory_structure
 from .sum_linked_lists import sum_linked_lists
+from .is_mountain_peak import is_mountain_peak
 
 from .helpers import Node
 from .doubly_linked_list import LinkedList

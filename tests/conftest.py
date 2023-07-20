@@ -239,3 +239,8 @@ def graph():
         "dfs_a_expected": ["A", "B", "E", "F", "I", "J", "C", "D", "G", "K", "H"],
         "bfs_a_expected": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K"],
     }
+
+
+@pytest.fixture
+def is_mountain_peak_lists():
+    return [[1, 2, 3, 4, 3, 2, 1], [1, 2, 1, 4, 3, 2, 1], [1, 2, 3, 4, 3, 4, 1]]
