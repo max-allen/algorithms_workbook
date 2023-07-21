@@ -266,3 +266,17 @@ def flood_fill_no_connection():
         "color": 0,
         "expected": [[0, 0, 0], [0, 0, 0]],
     }
+
+
+@pytest.fixture
+def river_sizes_matrix():
+    return {
+        "matrix": [
+            [1, 0, 0, 1, 0],
+            [1, 0, 1, 0, 0],
+            [0, 0, 1, 0, 1],
+            [1, 0, 1, 0, 1],
+            [1, 0, 1, 1, 0],
+        ],
+        "expected": [2, 1, 5, 2, 2],
+    }

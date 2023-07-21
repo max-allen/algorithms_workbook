@@ -10,6 +10,7 @@ from .build_directory_structure import build_directory_structure
 from .sum_linked_lists import sum_linked_lists
 from .is_mountain_peak import is_mountain_peak
 from .flood_fill import flood_fill
+from .river_sizes import river_sizes
 
 from .helpers import Node
 from .doubly_linked_list import LinkedList
