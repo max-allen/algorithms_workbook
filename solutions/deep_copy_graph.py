@@ -1,4 +1,5 @@
 from .helpers import GraphNode as Node
+from collections import deque
 
 
 def dfs(node, visited):
@@ -14,9 +15,31 @@ def dfs(node, visited):
     return copy
 
 
-def deep_copy(node):
+def bfs(node):
+    # process node and neighbors
+    # enqueue processing of neighbors neighbors
     visited = {}
-    return dfs(node, visited)
+    queue = deque()
+    queue.append(node)
+
+    visited[node] = Node(node.value)
+
+    while len(queue):
+        curr = queue.popleft()
+        copy = visited[curr]
+
+        for neighbor in curr.neighbors:
+            if neighbor not in visited:
+                visited[neighbor] = Node(neighbor.value)
+                queue.append(neighbor)
+
+            copy.neighbors.append(visited[neighbor])
+
+    return visited[node]
+
+
+def deep_copy(node):
+    return bfs(node)
 
 
 def test_deep_copy(orig, copy):
