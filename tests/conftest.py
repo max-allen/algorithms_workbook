@@ -867,3 +867,11 @@ def graph_nodes():
     n3 = GraphNode(3, [n2])
 
     return {"n1": n1, "n2": n2, "n3": n3}
+
+
+@pytest.fixture
+def integer_lists():
+    return {
+        "unsorted": [10, 9, 7, 15, 11, 2, 5, 6],
+        "sorted": [2, 5, 6, 7, 9, 10, 11, 15],
+    }
