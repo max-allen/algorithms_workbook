@@ -13,6 +13,7 @@ from .flood_fill import flood_fill
 from .river_sizes import river_sizes
 from .deep_copy_graph import deep_copy, test_deep_copy
 from .bubblesort import bubblesort
+from .insertion_sort import insertion_sort
 
 from .helpers import ListNode, GraphNode
 from .doubly_linked_list import LinkedList
