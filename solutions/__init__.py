@@ -8,6 +8,7 @@ from .get_nth_fibonacci import get_nth_fibonacci
 from .remove_linked_list_duplicates import remove_linked_list_duplicates
 from .build_directory_structure import build_directory_structure
 from .sum_linked_lists import sum_linked_lists
+from .get_middle_node import get_middle_node
 from .is_mountain_peak import is_mountain_peak
 from .flood_fill import flood_fill
 from .river_sizes import river_sizes

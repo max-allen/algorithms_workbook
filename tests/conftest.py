@@ -107,6 +107,7 @@ def linked_list_nodes():
         1: ListNode(1),
         9: ListNode(9),
         4: ListNode(4),
+        12: ListNode(12),
     }
 
 
@@ -117,6 +118,19 @@ def singly_linked_list(linked_list_nodes):
     linked_list.next.next = linked_list_nodes[9]
     linked_list.next.next.next = linked_list_nodes[10]
     return linked_list
+
+
+@pytest.fixture
+def odd_length_linked_list(singly_linked_list, linked_list_nodes):
+    linked_list = singly_linked_list
+    while linked_list != linked_list_nodes[10]:
+        linked_list = linked_list.next
+
+    linked_list.next = linked_list_nodes[1]
+    linked_list.next.next = linked_list_nodes[3]
+    linked_list.next.next.next = linked_list_nodes[5]
+    linked_list.next.next.next.next = linked_list_nodes[12]
+    return singly_linked_list
 
 
 @pytest.fixture
