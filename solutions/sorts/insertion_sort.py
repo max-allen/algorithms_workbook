@@ -1,7 +1,4 @@
-def swap(arr, prev_idx, curr_idx):
-    prev_value, curr_value = arr[prev_idx], arr[curr_idx]
-    arr[prev_idx], arr[curr_idx] = curr_value, prev_value
-    return arr
+from .utils import swap
 
 
 def insertion_sort(arr):

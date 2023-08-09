@@ -1,6 +1,6 @@
-from solutions import bubblesort
+from solutions import bubble_sort
 
 
 class TestClass:
     def test_sort_result(self, integer_lists):
-        assert bubblesort(integer_lists["unsorted"]) == integer_lists["sorted"]
+        assert bubble_sort(integer_lists["unsorted"]) == integer_lists["sorted"]
