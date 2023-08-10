@@ -9,3 +9,6 @@ class TestCases:
     def test_invalid_inputs(self, parentheses_inputs):
         assert valid_parentheses(parentheses_inputs[2][0]) == parentheses_inputs[2][1]
         assert valid_parentheses(parentheses_inputs[3][0]) == parentheses_inputs[3][1]
+
+    def test_repeating_open(self, parentheses_repeating_input):
+        assert valid_parentheses(parentheses_repeating_input) is True

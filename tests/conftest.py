@@ -340,3 +340,8 @@ def non_overlapping_ranges():
 @pytest.fixture
 def parentheses_inputs():
     return [("()", True), ("()[]{}", True), ("(]", False), ("(){", False)]
+
+
+@pytest.fixture
+def parentheses_repeating_input():
+    return "((({{{}}})))"
