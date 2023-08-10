@@ -12,7 +12,6 @@ from .is_mountain_peak import is_mountain_peak
 from .flood_fill import flood_fill
 from .river_sizes import river_sizes
 from .can_schedule import can_schedule
-from .valid_parentheses import valid_parentheses
 
 
 from .linked_lists import (
@@ -21,7 +20,7 @@ from .linked_lists import (
     ListNode,
     LinkedList,
 )
+from .stacks import valid_parentheses, Stack
 from .graphs import deep_copy, test_deep_copy, GraphNode, AdjList
 from .sorts import bubble_sort, insertion_sort, selection_sort
 from .queue import Queue
-from .stack import Stack
