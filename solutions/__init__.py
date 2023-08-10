@@ -10,6 +10,7 @@ from .get_middle_node import get_middle_node
 from .is_mountain_peak import is_mountain_peak
 from .flood_fill import flood_fill
 from .river_sizes import river_sizes
+from .can_schedule import can_schedule
 
 
 from .linked_lists import (
