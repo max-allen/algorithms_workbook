@@ -4,7 +4,7 @@ from solutions import (
     GraphNode,
     Queue,
     Stack,
-    Graph,
+    AdjList as Graph,
     LinkedList as DoublyLinkedList,
 )
 

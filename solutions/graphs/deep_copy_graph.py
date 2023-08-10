@@ -1,4 +1,4 @@
-from .helpers import GraphNode as Node
+from .utils import GraphNode as Node
 from collections import deque
 
 

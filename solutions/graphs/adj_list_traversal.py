@@ -1,7 +1,7 @@
 from collections import defaultdict, deque
 
 
-class Graph:
+class AdjList:
     def __init__(self):
         self.vertices = defaultdict(list)
 
