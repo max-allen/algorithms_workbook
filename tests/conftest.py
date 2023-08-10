@@ -335,3 +335,8 @@ def integer_lists():
 @pytest.fixture
 def non_overlapping_ranges():
     return [[2, 4], [4, 6]]
+
+
+@pytest.fixture
+def parentheses_inputs():
+    return [("()", True), ("()[]{}", True), ("(]", False), ("(){", False)]

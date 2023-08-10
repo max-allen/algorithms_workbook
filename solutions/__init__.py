@@ -12,6 +12,7 @@ from .is_mountain_peak import is_mountain_peak
 from .flood_fill import flood_fill
 from .river_sizes import river_sizes
 from .can_schedule import can_schedule
+from .valid_parentheses import valid_parentheses
 
 
 from .linked_lists import (
