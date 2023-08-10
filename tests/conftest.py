@@ -32,6 +32,11 @@ def two_number_sum_no_match():
 
 
 @pytest.fixture
+def two_sum_match():
+    return [{"arr": [2, 7, 11, 15], "target": 9}, {"arr": [3, 2, 4], "target": 6}]
+
+
+@pytest.fixture
 def three_number_sum_multiple():
     return {
         "arr": [12, 3, 1, 2, -6, 5, -8, 6],
@@ -325,6 +330,7 @@ def integer_lists():
         "unsorted": [10, 9, 7, 15, 11, 2, 5, 6],
         "sorted": [2, 5, 6, 7, 9, 10, 11, 15],
     }
+
 
 @pytest.fixture
 def non_overlapping_ranges():
