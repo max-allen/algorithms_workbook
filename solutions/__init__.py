@@ -16,6 +16,8 @@ from .can_schedule import can_schedule
 
 from .linked_lists import (
     sum_linked_lists,
+    merge_sorted_lists,
+    build_list_from_values,
     remove_linked_list_duplicates,
     ListNode,
     LinkedList,

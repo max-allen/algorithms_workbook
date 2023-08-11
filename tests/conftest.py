@@ -6,6 +6,7 @@ from solutions import (
     Stack,
     AdjList as Graph,
     LinkedList as DoublyLinkedList,
+    build_list_from_values,
 )
 
 
@@ -345,3 +346,12 @@ def parentheses_inputs():
 @pytest.fixture
 def parentheses_repeating_input():
     return "((({{{}}})))"
+
+
+@pytest.fixture
+def sorted_lists_merged():
+    return {
+        "list_one": build_list_from_values([1, 2, 4]),
+        "list_two": build_list_from_values([1, 3, 4]),
+        "expected": [1, 1, 2, 3, 4, 4],
+    }
