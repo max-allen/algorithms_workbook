@@ -7,10 +7,8 @@ from linked_lists import (
     LinkedList as DoublyLinkedList,
 )
 
-from solutions import (
-    Queue,
-    Stack,
-)
+from stacks import Stack
+from queues import Queue
 
 
 @pytest.fixture

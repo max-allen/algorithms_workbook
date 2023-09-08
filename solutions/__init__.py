@@ -14,6 +14,4 @@ from .can_schedule import can_schedule
 from .insert_interval import insert_interval
 
 
-from .stacks import valid_parentheses, Stack
 from .sorts import bubble_sort, insertion_sort, selection_sort
-from .queue import Queue

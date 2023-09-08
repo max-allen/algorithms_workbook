@@ -1,4 +1,4 @@
-from solutions import valid_parentheses
+from stacks import valid_parentheses
 
 
 class TestCases:
