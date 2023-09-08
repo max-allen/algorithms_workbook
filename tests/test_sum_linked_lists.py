@@ -1,4 +1,4 @@
-from solutions import sum_linked_lists
+from linked_lists import sum_linked_lists
 
 
 class TestCases:

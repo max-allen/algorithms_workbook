@@ -1,12 +1,15 @@
 import pytest
 
 from graphs import GraphNode, AdjList as Graph
-from solutions import (
+from linked_lists import (
+    build_list_from_values,
     ListNode,
+    LinkedList as DoublyLinkedList,
+)
+
+from solutions import (
     Queue,
     Stack,
-    LinkedList as DoublyLinkedList,
-    build_list_from_values,
 )
 
 

@@ -1,4 +1,4 @@
-from . import ListNode as Node, LinkedList
+from linked_lists import ListNode as Node, LinkedList
 
 
 class Queue:
