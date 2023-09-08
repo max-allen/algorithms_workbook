@@ -1,4 +1,4 @@
-from solutions import three_number_sum
+from arrays import three_number_sum
 
 
 class TestCases:
