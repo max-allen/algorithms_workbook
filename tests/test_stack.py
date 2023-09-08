@@ -1,4 +1,4 @@
-from solutions import Stack
+from stacks import Stack
 
 
 class TestCases:

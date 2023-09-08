@@ -1,4 +1,4 @@
-from solutions import flood_fill
+from graphs import flood_fill
 
 
 class TestCases:

@@ -1,4 +1,4 @@
-from solutions import two_number_sum
+from arrays import two_number_sum
 
 
 class TestCases:

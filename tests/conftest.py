@@ -1,13 +1,14 @@
 import pytest
-from solutions import (
-    ListNode,
-    GraphNode,
-    Queue,
-    Stack,
-    AdjList as Graph,
-    LinkedList as DoublyLinkedList,
+
+from graphs import GraphNode, AdjList as Graph
+from linked_lists import (
     build_list_from_values,
+    ListNode,
+    LinkedList as DoublyLinkedList,
 )
+
+from stacks import Stack
+from queues import Queue
 
 
 @pytest.fixture

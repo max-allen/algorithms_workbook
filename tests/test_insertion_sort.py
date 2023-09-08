@@ -1,4 +1,4 @@
-from solutions import insertion_sort
+from sorting import insertion_sort
 
 
 class TestCases:

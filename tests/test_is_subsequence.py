@@ -1,4 +1,4 @@
-from solutions import is_subsequence
+from strings import is_subsequence
 
 
 class TestCases:

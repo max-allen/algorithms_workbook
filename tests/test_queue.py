@@ -1,4 +1,4 @@
-from solutions import Queue
+from queues import Queue
 
 
 class TestCases:

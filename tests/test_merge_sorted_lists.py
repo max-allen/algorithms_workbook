@@ -1,4 +1,4 @@
-from solutions import merge_sorted_lists
+from linked_lists import merge_sorted_lists
 
 
 class TestCases:

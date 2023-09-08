@@ -1,4 +1,4 @@
-from solutions import LinkedList
+from linked_lists import LinkedList
 
 
 class TestCases:

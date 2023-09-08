@@ -1,4 +1,4 @@
-from solutions import get_middle_node
+from linked_lists import get_middle_node
 
 
 class TestCases:

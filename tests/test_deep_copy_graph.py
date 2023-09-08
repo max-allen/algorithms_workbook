@@ -1,4 +1,4 @@
-from solutions import deep_copy, test_deep_copy as copy_test_helper
+from graphs import deep_copy, test_deep_copy as copy_test_helper
 
 
 class TestCases:

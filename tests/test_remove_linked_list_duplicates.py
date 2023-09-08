@@ -1,4 +1,4 @@
-from solutions import remove_linked_list_duplicates
+from linked_lists import remove_linked_list_duplicates
 
 
 class TestCases:

@@ -1,4 +1,4 @@
-from solutions import is_mountain_peak
+from arrays import is_mountain_peak
 
 
 class TestCases:

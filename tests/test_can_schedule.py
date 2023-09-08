@@ -1,4 +1,4 @@
-from solutions import can_schedule
+from arrays import can_schedule
 
 
 class TestCases:
