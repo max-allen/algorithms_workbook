@@ -1,10 +1,10 @@
 import pytest
+
+from graphs import GraphNode, AdjList as Graph
 from solutions import (
     ListNode,
-    GraphNode,
     Queue,
     Stack,
-    AdjList as Graph,
     LinkedList as DoublyLinkedList,
     build_list_from_values,
 )
