@@ -45,10 +45,10 @@ class LinkedList:
             self.set_head(insert_node)
             return
 
-        elif insert_type is "head":
+        elif insert_type == "head":
             self.set_head(insert_node)
 
-        elif insert_type is "tail":
+        elif insert_type == "tail":
             self.set_tail(insert_node)
 
         else:
