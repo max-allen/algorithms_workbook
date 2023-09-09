@@ -1,4 +1,4 @@
-from solutions import river_sizes
+from graphs import river_sizes
 
 
 class TestCases:

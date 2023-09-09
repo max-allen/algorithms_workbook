@@ -1,4 +1,4 @@
-from solutions import check_path_exists
+from graphs import check_path_exists
 
 
 class TestCases:

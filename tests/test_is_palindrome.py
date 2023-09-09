@@ -1,4 +1,4 @@
-from solutions import is_palindrome
+from strings import is_palindrome
 
 
 class TestCases:

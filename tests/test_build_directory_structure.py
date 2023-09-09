@@ -1,4 +1,4 @@
-from solutions import build_directory_structure
+from recursion import build_directory_structure
 
 
 class TestCases:

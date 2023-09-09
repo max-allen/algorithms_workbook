@@ -1,4 +1,4 @@
-from solutions import insert_interval
+from arrays import insert_interval
 
 
 class TestCases:

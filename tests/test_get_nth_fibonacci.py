@@ -1,4 +1,4 @@
-from solutions import get_nth_fibonacci
+from recursion import get_nth_fibonacci
 
 
 class TestCases:
