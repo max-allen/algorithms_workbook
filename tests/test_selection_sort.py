@@ -1,4 +1,4 @@
-from solutions import selection_sort
+from sorting import selection_sort
 
 
 class TestClass:

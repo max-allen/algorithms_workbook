@@ -1,4 +1,4 @@
-from solutions import bubble_sort
+from sorting import bubble_sort
 
 
 class TestClass:
