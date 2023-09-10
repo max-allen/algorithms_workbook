@@ -3,7 +3,10 @@ import os, re
 
 def get_markdown_link(title, path, prefix=None):
     """Formats title and path as Markdown link."""
-    title_stem = re.sub(r"./|\.py$", "", title)
+    if title.count("/") == 2:
+        title_stem = title.split("/").pop()
+    else:
+        title_stem = re.sub(r"./|\.py$", "", title)
 
     # converts snake case to capitlized with spaces, e.g. linked_list -> Linked List
     formatted_title = " ".join(map(lambda x: x.capitalize(), title_stem.split("_")))
