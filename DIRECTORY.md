@@ -1,7 +1,3 @@
-# Algorithms Workbook
-
-Data Structures and Algorithms in Python.
-
 ## [Strings](./strings/README.md)
 
 - [Is Subsequence](./strings/is_subsequence.py)
