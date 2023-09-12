@@ -1,8 +1,8 @@
 # install project dependencies and run tests
 
-name: test project
+name: Run Tests
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   build:
