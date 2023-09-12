@@ -1,4 +1,4 @@
-# install project dependencies and run tests
+# install project dependencies, run tests, lint
 
 name: Run Tests
 
@@ -22,8 +22,8 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install ruff pytest
+        pip install pytest pylint
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Test with pytest
+    - name: Run Tests
       run: |
         pytest
