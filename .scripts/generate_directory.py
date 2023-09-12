@@ -17,10 +17,11 @@ def get_markdown_link(title, path, prefix=None):
 def generate_directory():
     """Walks project directory and generates markdown links for each section."""
 
-    EXCLUDED_PATHS = "__|.git|tests|.scripts|pytest|solutions|utils"
+    EXCLUDED_PATHS = "__|.git|tests|scripts|pytest|utils"
 
     with open("DIRECTORY.md", "w") as file:
         for root, _, files in os.walk("."):
+            print("ROOT", root)
             if not re.search(EXCLUDED_PATHS, root) and root != ".":
                 file.write(get_markdown_link(root, f"{root}/README.md", "##"))
 
