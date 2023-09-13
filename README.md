@@ -1,5 +1,7 @@
 # Algorithms Workbook
 
+![Build Status](https://github.com/max-allen/algorithms_workbook/actions/workflows/main.yml/badge.svg)
+
 Data Structures and Algorithms in Python.
 
 ## Why
