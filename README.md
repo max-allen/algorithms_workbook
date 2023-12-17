@@ -2,23 +2,6 @@
 
 Data Structures and Algorithms in Python.
 
-## Why
-
-Virtually _any_ task performed by an application can be expressed through
-the data structures and algorithms chosen to complete it. When
-determining the right solution for a task, comparing the respective merit of
-solutions essentially compares the relative suitability of the solutions'
-structures and algorithms for the task at hand.
-
-It is therefore important for engineers to maintain fluency in data structures,
-algorithms, and their applications.
-
-## Objective
-
-The goal of this project is to offer a practical tool for developing competency
-in using data structures and algorithms. Understanding, _not_ passing FAANG
-interviews, is the objective.
-
 ## Directory
 
 ### [Strings](./strings/README.md)
