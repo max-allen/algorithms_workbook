@@ -17,6 +17,7 @@ def get_markdown_link(title, path, prefix=None):
 def generate_directory():
     """Walks project directory and generates markdown links for each section."""
 
+    # TODO: move to constants file after removing relative module name '.scripts'
     EXCLUDED_PATHS = "__|.git|tests|scripts|pytest|utils"
 
     with open("DIRECTORY.md", "w") as file:
