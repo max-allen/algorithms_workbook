@@ -15,4 +15,4 @@ def two_sum(nums, target):
         if comp in visited:
             return [visited[comp], idx]
 
-        visited[nums] = idx
+        visited[num] = idx
