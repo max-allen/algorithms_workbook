@@ -17,7 +17,9 @@ def valid_parentheses(s):
     for char in s:
         if char in char_hash:
             stack.append(char_hash[char])
-        elif char != stack.pop():
-            return False
+        else:
+            closing_char = stack.pop() if stack else None
+            if char != closing_char:
+                return False
 
-    return len(stack) == 0
+    return not stack

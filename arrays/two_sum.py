@@ -9,10 +9,10 @@
 def two_sum(nums, target):
     visited = {}
 
-    for idx in range(len(nums)):
-        curr = nums[idx]
-        comp = target - curr
+    for idx, num in enumerate(nums):
+        comp = target - num
 
         if comp in visited:
-            return [idx, visited[comp]]
-        visited[nums[idx]] = idx
+            return [visited[comp], idx]
+
+        visited[nums] = idx
