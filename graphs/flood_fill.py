@@ -8,7 +8,7 @@ def flood_fill(image, sr, sc, color):
     starting_pixel = image[sr][sc]
     visited = set()
 
-    def dfs(row, col, visited, image):
+    def dfs(row, col):
         if (
             row not in range(len(image))
             or col not in range(len(image[0]))
@@ -27,8 +27,8 @@ def flood_fill(image, sr, sc, color):
         neighbors = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
         for x, y in neighbors:
-            dfs(row + x, col + y, visited, image)
+            dfs(row + x, col + y)
 
-    dfs(sr, sc, visited, image)
+    dfs(sr, sc)
 
     return image
