@@ -10,11 +10,11 @@ connected by exactly one edge and there can be no cycles in the graph.
 Graphs are commonly used to model relationships between unordered entities:
 
 - **Social Media**: Each Facebook user can be represented as vertex, with edges
-between users indicating a Facebook friendship.
+  between users indicating a Facebook friendship.
 
-- **Travel**: A flight from Location A to Location B can be represented with a
-weighted graph, where the locations are vertices and edges indicate a valid
-flight with edge values specifying distance.
+- **Air Travel**: A flight from Location A to Location B can be represented with
+  a weighted graph, where the locations are vertices and edges indicate a valid
+  flight with edge values specifying distance.
 
 ## Representations
 
@@ -40,14 +40,17 @@ flight with edge values specifying distance.
 ]
 ```
 
+- You may need to build a graph from another structure. See
+  [check_path_exists](check_path_exists.py) for a list example.
+
 ## Traversal
 
 ### Time Complexities
 
-| Algorithm   | Big-O       |
-| ----------- | ----------- |
-| DFS         | O(V + E)    |
-| BFS         | O(V + E)    |
+| Algorithm | Big-O    |
+| --------- | -------- |
+| DFS       | O(V + E) |
+| BFS       | O(V + E) |
 
 ### Matrices
 
@@ -140,13 +143,25 @@ def traverse_list_bfs(graph):
       dfs(vertex)
 ```
 
+## Considerations
+
+- **Visited Nodes**: Keep track of visited nodes using a `set` and only visit
+  each node once; it's possible to produce an infinite loop otherwise.
+
+### Edge Cases
+
+- Empty graph
+- Graph with one or two nodes
+- Disconnected graphs
+- Graphs with cycles
+
 ## Exercises
 
 ### Essential
 
 - [Number of Islands](number_of_islands.py)
 - [Flood Fill](flood_fill.py)
-- 01 Matrix
+- [01 Matrix](https://leetcode.com/problems/01-matrix/)
 
 ### Reccommended
 
