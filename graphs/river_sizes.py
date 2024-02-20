@@ -10,7 +10,7 @@ def river_sizes(matrix):
     sizes = []
     visited = set()
 
-    def dfs(row, col, visited, matrix):
+    def dfs(row, col):
         if (
             row not in rows
             or col not in cols
@@ -25,14 +25,14 @@ def river_sizes(matrix):
         neighbors = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
         for x, y in neighbors:
-            size += dfs(row + x, col + y, visited, matrix)
+            size += dfs(row + x, col + y)
 
         return size + 1
 
     for row in rows:
         for col in cols:
             if (row, col) not in visited and matrix[row][col] == 1:
-                size = dfs(row, col, visited, matrix)
+                size = dfs(row, col)
                 sizes.append(size)
 
     return sizes

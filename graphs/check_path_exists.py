@@ -18,35 +18,20 @@ from collections import defaultdict, deque
 # foo, quux -> false
 
 
-def bfs(graph, src, dest):
-    queue = deque()
-    queue.append(src)
-
-    while len(queue):
-        curr = queue.popleft()
-        if curr == dest:
-            return True
-
-        for edge in graph[curr]:
-            queue.append(edge)
-
-    return False
-
-
-def dfs(graph, vertex, target):
-    if vertex == target:
-        return True
-
-    for edge in graph[vertex]:
-        return dfs(graph, edge, target)
-
-    return False
-
-
 def check_path_exists(src, dest, paths):
-    adj_list = defaultdict(list)
+    graph = defaultdict(list)
+
     for path in paths:
         for key in path:
-            adj_list[key].append(path[key])
+            graph[key].append(path[key])
 
-    return bfs(adj_list, src, dest)
+    def dfs(vertex):
+        if vertex == dest:
+            return True
+
+        for edge in graph[vertex]:
+            return dfs(edge)
+
+        return False
+
+    return dfs(src)
