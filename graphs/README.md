@@ -20,7 +20,7 @@ flight with edge values specifying distance.
 
 ### Adjacency List
 
-```python
+```py
 {
   "phil": ['larry', 'martin']
   "larry": ['phil']
@@ -31,7 +31,7 @@ flight with edge values specifying distance.
 
 ### Adjacency Matrix
 
-```python
+```py
 [
   [0, 1, 1, 0],
   [1, 0, 0, 0],
