@@ -6,14 +6,12 @@
 
 def flood_fill(image, sr, sc, color):
     starting_pixel = image[sr][sc]
+    rows, cols = range(len(image)), range((len(image[0])))
+
     visited = set()
 
     def dfs(row, col):
-        if (
-            row not in range(len(image))
-            or col not in range(len(image[0]))
-            or (row, col) in visited
-        ):
+        if row not in rows or col not in cols or (row, col) in visited:
             return
 
         visited.add((row, col))
