@@ -5,19 +5,14 @@
 
 
 def two_number_sum(nums, target):
-    """
-    time: O(n), where n is the number of integers in the list
-    space: O(n), where n is the number of integers in the list
-    """
-    mutable = nums.copy()
-    el = mutable.pop(0)
+    el = nums.pop(0)
 
     comp = target - el
 
-    if comp in mutable:
+    if comp in nums:
         return [el, comp]
 
-    elif len(mutable) > 1:
-        return two_number_sum(mutable, target)
+    elif len(nums) > 1:
+        return two_number_sum(nums, target)
 
     return []
