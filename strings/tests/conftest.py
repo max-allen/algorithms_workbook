@@ -32,3 +32,8 @@ def is_palindrome_invalid():
 @pytest.fixture
 def is_palindrome_valid_spaces():
     return "Was it a car or a cat I saw"
+
+
+@pytest.fixture
+def is_palindrome_valid_colon():
+    return "A man, a plan, a canal: Panama"
