@@ -42,3 +42,13 @@ def three_number_sum_no_match(three_number_sum_multiple):
 @pytest.fixture
 def is_mountain_peak_lists():
     return [[1, 2, 3, 4, 3, 2, 1], [1, 2, 1, 4, 3, 2, 1], [1, 2, 3, 4, 3, 4, 1]]
+
+
+@pytest.fixture
+def array_with_duplicate():
+    return {"arr": [1, 1, 2], "expected": [1, 2]}
+
+
+@pytest.fixture
+def array_with_several_duplicates():
+    return {"arr": [0, 0, 1, 1, 1, 2, 2, 3, 3, 4], "expected": [0, 1, 2, 3, 4]}
