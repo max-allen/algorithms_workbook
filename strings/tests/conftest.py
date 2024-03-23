@@ -37,3 +37,13 @@ def is_palindrome_valid_spaces():
 @pytest.fixture
 def is_palindrome_valid_colon():
     return "A man, a plan, a canal: Panama"
+
+
+@pytest.fixture
+def valid_anagram():
+    return ("anagram", "nagaram")
+
+
+@pytest.fixture
+def invalid_anagram():
+    return ("rat", "car")
